@@ -150,17 +150,69 @@ Open `http://127.0.0.1:8080/unified.html` after starting the API server.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/forgottennord-ship-it/GullWing.git
-cd GullWing
+git clone https://github.com/Chikimonki/Gullwing---Auto.git
+cd Gullwing---Auto
 
-# Train the ML model
-luajit src/moabi-ml.lua train reports/training reports/system.model
+# Run the test suite (generates evidence)
+bash tests/run-tests.sh
 
-# Start the API server
-gullwing serve
+# Open the vehicle dashboard
+# Serve vehicle.html via any HTTP server
+python3 -m http.server 8080
+# Then visit: http://127.0.0.1:8080/vehicle.html
+```
 
-# Open the frontend
-cd src/extension && python3 -m http.server 8080
+---
+
+## 🧪 Test Evidence
+
+All test results are cryptographically signed and stored in `evidence/`:
+
+```
+evidence/
+├── baselines/
+│   └── example-ecu-baseline.json    # ECU firmware hashes
+├── attestations/
+│   └── ecu-attestation.json         # Ed25519 signatures
+└── reports/
+    └── vehicle-security-report.txt  # Generated security reports
+```
+
+### Running Tests
+
+```bash
+# Run all tests and generate evidence
+bash tests/run-tests.sh
+
+# View generated evidence
+cat evidence/baselines/example-ecu-baseline.json
+cat evidence/attestations/ecu-attestation.json
+cat evidence/reports/vehicle-security-report-*.txt
+```
+
+### Evidence Format
+
+**Baseline JSON:**
+```json
+{
+  "ecus": {
+    "engine_ecu": {
+      "sha256": "a1b2c3d4...",
+      "attested": true,
+      "attestation_time": "2026-08-21T00:00:00Z"
+    }
+  }
+}
+```
+
+**Attestation JSON:**
+```json
+{
+  "algorithm": "Ed25519",
+  "signature": "MEUCIQD...",
+  "verified": true,
+  "ecus_signed": 8
+}
 ```
 
 ---
@@ -185,11 +237,11 @@ MIT — freely deployable, modifiable, and distributable by any organization.
 
 ## 🌐 Links
 
-- **Repository:** github.com/forgottennord-ship-it/GullWing
+- **Repository:** github.com/Chikimonki/Gullwing---Auto
 - **CISA Listing:** Pending adjudication
 - **White Paper:** `docs/GULLWING-WHITEPAPER-v4.5.md`
-- **Demo Video:** [YouTube].(https://youtu.be/kV_8j9oM0yo).
-- WCC - https://github.com/endrazine/wcc
+- **Demo Video:** [YouTube](https://youtu.be/kV_8j9oM0yo)
+- **WCC:** https://github.com/endrazine/wcc
 ---
 
 *The Cormorant dives. The Gullwing watches. The mirrors reflect.*

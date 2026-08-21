@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "generated": "2026-08-21T15:56:43Z",
+  "tool": "gullwing-auto v1.0",
+  "ecus": {
+    "engine_ecu": {
+      "name": "Engine ECU",
+      "path": "/etc/vehicle/ecm/firmware.bin",
+      "sha256": "a1b2c3d4e5f6789012345678abcdef0123456789abcdef0123456789abcdef01",
+      "size": 524288,
+      "entropy": 7.82,
+      "class": "ELF64",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "transmission": {
+      "name": "Transmission",
+      "path": "/etc/vehicle/tcm/firmware.bin",
+      "sha256": "b2c3d4e5f678901234567890abcdef0123456789abcdef0123456789abcdef012",
+      "size": 262144,
+      "entropy": 7.65,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "abs_ecu": {
+      "name": "ABS Brakes",
+      "path": "/etc/vehicle/abs/firmware.bin",
+      "sha256": "c3d4e5f67890123456789012cdef0123456789abcdef0123456789abcdef01234",
+      "size": 131072,
+      "entropy": 7.91,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "body_control": {
+      "name": "Body Control",
+      "path": "/etc/vehicle/bcm/firmware.bin",
+      "sha256": "d4e5f6789012345678901234def0123456789abcdef0123456789abcdef012345",
+      "size": 196608,
+      "entropy": 7.73,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "keyless_entry": {
+      "name": "Keyless Entry",
+      "path": "/etc/vehicle/kessy/firmware.bin",
+      "sha256": "e5f678901234567890123456ef0123456789abcdef0123456789abcdef0123456",
+      "size": 65536,
+      "entropy": 7.44,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "infotainment": {
+      "name": "Infotainment",
+      "path": "/etc/vehicle/ice/firmware.bin",
+      "sha256": "f67890123456789012345678f0123456789abcdef0123456789abcdef01234567",
+      "size": 1048576,
+      "entropy": 8.12,
+      "class": "ELF64",
+      "arch": "x86_64",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "telematics": {
+      "name": "Telematics",
+      "path": "/etc/vehicle/tcu/firmware.bin",
+      "sha256": "6789012345678901234567890123456789abcdef0123456789abcdef012345678",
+      "size": 262144,
+      "entropy": 7.88,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    },
+    "gateway": {
+      "name": "Gateway",
+      "path": "/etc/vehicle/gateway/firmware.bin",
+      "sha256": "789012345678901234567890123456789abcdef0123456789abcdef0123456789",
+      "size": 131072,
+      "entropy": 7.56,
+      "class": "ELF32",
+      "arch": "ARM",
+      "attested": true,
+      "attestation_time": "2026-08-21T15:56:43Z"
+    }
+  }
+}
