@@ -4,6 +4,8 @@
 
 **Convergent Binary Intelligence Platform** — 8-layer analysis of ELF and PE executables in under 25ms. In-process. Local. Open source.
 
+**Cross-Platform:** Works on WSL, Linux, macOS, and Windows (Git Bash / PowerShell with Git).
+
 ---
 
 ## ⚡ Quick Start
